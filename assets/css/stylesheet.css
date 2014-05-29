@@ -32,16 +32,16 @@ hr {
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-.connections li,
-.connections li a {
+.connections li {
 	display: inline-block;
 	list-style: none;
 	margin-left: 15px;
 	margin-right: 15px;
 	font-size: 16px;
+}
+.connections li a {
 	color: rgb(255, 255, 255);
 	color: rgba(255, 255, 255, 0.5);
-	height: 100%;
 }
 .connections li:hover a {/*
 	transition: all 1s;
