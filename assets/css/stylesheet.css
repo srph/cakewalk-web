@@ -1,0 +1,82 @@
+html, body {
+	background-color: rgb(240, 61, 104);
+	background-color: rgba(240, 61, 104, 1);
+	margin: 0;
+	color: white;
+	overflow: hidden;
+	height: 100%;
+}
+
+.container {
+	margin-top: 20%;
+	width: 50%;
+	vertical-align: middle;
+}
+
+hr {
+	border-radius: 2px;
+	width: 50%;
+	border-color: rgb(255, 255, 255);
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
+/**
+ * Social media icons
+ */
+.connections {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	height: 30px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.connections li,
+.connections li a {
+	display: inline-block;
+	list-style: none;
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+	color: rgba(255, 255, 255, 0.5);
+	height: 100%;
+}
+.connections li:hover a {/*
+	transition: all 1s;
+		-moz-transition: all 1s;
+		-webkit-transition: all 1s;
+		-o-transition: all 1s;*/
+
+	color: rgba(255, 255, 255, 1);
+
+}
+.connections li:hover {
+	border-bottom: 1px solid rgb(255, 255, 255);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+	animation: connection-li-hover 2.5s 3;
+		-webkit-animation: connection-hover 2.5s 3;
+		-moz-animation: connection-hover 2.5s 3;
+		-o-animation: connection-hover 2.5s 3;
+}
+@-webkit-keyframes connection-hover {
+	0%, 40%, 80% {
+		opacity: 0.5;
+	}
+
+	20%, 60%  {
+		opacity: 1;
+	}
+}
+
+.content {
+	display: block;
+}
+
+@media all and (max-device-width: 320px) {
+	.connections {
+		width: 100%;
+	}
+}
