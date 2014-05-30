@@ -1,9 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
 html, body {
 	background-color: rgb(240, 61, 104);
 	background-color: rgba(240, 61, 104, 1);
 	margin: 0;
 	color: white;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	height: 100%;
 }
 
@@ -56,10 +58,10 @@ hr {
 	border-bottom: 1px solid rgb(255, 255, 255);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
-	animation: connection-li-hover 2.5s 3;
-		-webkit-animation: connection-hover 2.5s 3;
-		-moz-animation: connection-hover 2.5s 3;
-		-o-animation: connection-hover 2.5s 3;
+	animation: connection-li-hover 2.5s 1;
+		-webkit-animation: connection-hover 2.5s 1;
+		-moz-animation: connection-hover 2.5s 1;
+		-o-animation: connection-hover 2.5s 1;
 }
 @-webkit-keyframes connection-hover {
 	0%, 40%, 80% {
@@ -71,12 +73,49 @@ hr {
 	}
 }
 
+.module {
+	content: block;
+	height: 100vh;
+}
 .content {
 	display: block;
 }
 
-@media all and (max-device-width: 320px) {
+/**
+ * Custom button css
+ */
+.btn {
+	background-color: transparent;
+	border: 1px solid;
+	opacity: 0.5;
+	padding: 10px 25px;
+	font-size: 18px;
+	font-family: 'Montserrat', 'Helvetica', 'Helvetica Neue', serif, sans-serif;
+	text-transform: uppercase;
+
+	transition: all 1s;
+		-moz-transition: all 1s;
+		-webkit-transition: all 1s;
+		-o-transition: all 1s;*/
+}
+.btn-default {
+	border-color: #fff;
+	color: #fff;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+	border-color: #fff;
+	background-color: #fff;
+	color: #000;
+	opacity: 1;
+	outline: 0;
+}
+
+/*@media all and (max-device-width: 320px) {
 	.connections {
 		width: 100%;
 	}
-}
+}*/
