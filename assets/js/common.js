@@ -12,8 +12,17 @@
 		}, 500);
 	}
 
-	var even = $('.connections li:nth-child(2n) a');
-	var odd = $('.connections li:nth-child(2n + 1) a');
+	/**
+	 * Move window to given element
+	 */ 
+	var move = function(elm) {
+		body.animate({
+			scrollTop: elm + 'px'
+		}, 700);
+	}
+
+	var even = $('.connections li:nth-child(2n)');
+	var odd = $('.connections li:nth-child(2n + 1)');
 
 	/**
 	 * Change background of background when a
@@ -24,6 +33,27 @@
 	});
 	odd.hover(function(e) {
 		change('rgb(49, 159, 221)');
+	});
+
+	/**
+	 * Button event listener Move to given id
+	 */
+	var btn = $('a.btn');
+	btn.on('click', function(e) {
+		e.preventDefault();
+		var href = $(this).attr('href');
+		var location = $(href);
+
+		move( location.offset().top );
+	});
+
+	var arrow = $('.up-caret-circle');
+	arrow.on('click', function(e) {
+		e.preventDefault();
+		var id = '#' + $(this).data('move-to-id');
+		var location = $( id );
+
+		move( location.offset().top );
 	});
 
 })(window.jQuery);
