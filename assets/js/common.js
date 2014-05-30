@@ -4,6 +4,11 @@
 	var body = $('html, body');
 
 	/**
+	 * Hide the browser's scrollbar
+	 */
+	body.addClass('hide-scrollbar');
+
+	/**
 	 * Animate the body's background color
 	 */
 	var change = function(color) {
@@ -36,7 +41,7 @@
 	});
 
 	/**
-	 * Button event listener Move to given id
+	 * Button event listener move to given id
 	 */
 	var btn = $('a.btn');
 	btn.on('click', function(e) {
@@ -47,6 +52,9 @@
 		move( location.offset().top );
 	});
 
+	/**
+	 * Arrow event listener, move to given id
+	 */
 	var arrow = $('.up-caret-circle');
 	arrow.on('click', function(e) {
 		e.preventDefault();
